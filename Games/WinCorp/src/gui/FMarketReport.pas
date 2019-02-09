@@ -24,7 +24,7 @@ interface
 uses
   SysUtils, Windows, Messages, Classes, Graphics, Controls,
   Forms, Dialogs, ExtCtrls, JvCtrls, StdCtrls, Buttons, WidgetGame,
-  JvSlider, JvExControls, JvLabel;
+  JvSlider, JvExControls, JvLabel, JvxSlider;
 
 type
   TfmMarketReport = class(TForm)
@@ -42,7 +42,6 @@ type
     lbQty2: TLabel;
     lbCst2: TLabel;
     lbChange: TLabel;
-    slMix: TJvSlider;
     lbMix1: TLabel;
     lbMIx2: TLabel;
     lbPC: TLabel;
@@ -52,6 +51,7 @@ type
     lbRD: TLabel;
     lbRI: TLabel;
     lbCst1: TLabel;
+    slMix: TJvxSlider;
     procedure FormShow(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
@@ -103,7 +103,7 @@ begin
     end;
     lbRD.Caption:= tmp1;
     lbRI.Caption:= tmp2;
-    slMix.Position:= trunc(PA_D * 100);
+    slMix.Value:= trunc(PA_D * 100);
   end;
 end;
 

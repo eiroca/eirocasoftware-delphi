@@ -1,29 +1,29 @@
 (* GPL > 3.0
-Copyright (C) 1997-2008 eIrOcA Enrico Croce & Simona Burzio
+  Copyright (C) 1997-2008 eIrOcA Enrico Croce & Simona Burzio
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
 
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *)
 (*
- @author(Enrico Croce)
+  @author(Enrico Croce)
 *)
 unit FMain;
 
 interface
 
 uses
-  WidgetGame, SysUtils, Windows, Messages, Classes, Graphics, Controls,
-  Forms, Dialogs, StdCtrls, Buttons, JvTimerList, ExtCtrls, JvCtrls, JvExControls, JvLabel;
+  WidgetGame, SysUtils, Windows, Messages, Classes, Graphics, Controls, Forms, Dialogs, StdCtrls,
+  Buttons, JvTimerList, ExtCtrls, JvCtrls, JvExControls, JvLabel;
 
 type
   TfmMain = class(TForm)
@@ -65,9 +65,9 @@ var
 implementation
 
 {$R *.DFM}
+
 uses
-  eLibVCL,
-  FGame, FLetter, FMarketReport, FResult, MessageStr, FHelp;
+  eLibVCL, FAboutGPL, FGame, FLetter, FMarketReport, FResult, MessageStr, FHelp;
 
 procedure TfmMain.FormShow(Sender: TObject);
 begin
@@ -144,15 +144,15 @@ end;
 
 procedure TfmMain.FormCreate(Sender: TObject);
 begin
-  randomize;
+  Randomize;
   lbMain2.Caption:= IDS_LBMAIN2;
-  btPlay.Caption := IDS_PLAY;
-  btExit.Caption := IDS_EXIT;
-  btHelp.Caption := IDS_HELP;
-  WG:= TWidGetGame.Create(12);
-  WidgetGame.MsgDesc[WFLNONE] := IDS_WFLNONE;
-  WidgetGame.MsgDesc[WFLFIRE] := IDS_WFLFIRE;
-  WidgetGame.MsgDesc[WFLTRAN] := IDS_WFLTRAN;
+  btPlay.Caption:= IDS_PLAY;
+  btExit.Caption:= IDS_EXIT;
+  btHelp.Caption:= IDS_HELP;
+  WG:= TWidgetGame.Create(12);
+  WidgetGame.MsgDesc[WFLNONE]:= IDS_WFLNONE;
+  WidgetGame.MsgDesc[WFLFIRE]:= IDS_WFLFIRE;
+  WidgetGame.MsgDesc[WFLTRAN]:= IDS_WFLTRAN;
   WidgetGame.MsgDesc[WFLMAJR1]:= IDS_WFLMAJR1;
   WidgetGame.MsgDesc[WFLCSTDW]:= IDS_WFLCSTDW;
   WidgetGame.MsgDesc[WFLPRDUP]:= IDS_WFLPRDUP;
@@ -163,7 +163,7 @@ begin
   WidgetGame.MsgDesc[WFLMAJR2]:= IDS_WFLMAJR2;
   WidgetGame.MsgDesc[WMSTRIKE]:= IDS_WMSTRIKE;
   WidgetGame.MsgDesc[WMNOCASH]:= IDS_WMNOCASH;
-  WidgetGame.MsgDesc[WMNOEMP] := IDS_WMNOEMP;
+  WidgetGame.MsgDesc[WMNOEMP]:= IDS_WMNOEMP;
   WidgetGame.MsgDesc[WMBANKRP]:= IDS_WMBANKRP;
 end;
 
@@ -178,4 +178,3 @@ begin
 end;
 
 end.
-

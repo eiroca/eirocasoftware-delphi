@@ -1,0 +1,108 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{39C02701-DD42-4E40-B928-6B110B0B4BA0}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Scientific\OldNN\src\OldNN.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Scientific\eicBrain\src\eicBrain.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Scientific\Mutui\src\Mutui.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Vario\Agents\src\Agents.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Vario\Bioritmi\src\Bioritmi.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Vario\eMelody\src\eMelCheck.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Games\WinCorp\src\WinCorp.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="OldNN">
+        <MSBuild Projects="Scientific\OldNN\src\OldNN.dproj"/>
+    </Target>
+    <Target Name="OldNN:Clean">
+        <MSBuild Projects="Scientific\OldNN\src\OldNN.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="OldNN:Make">
+        <MSBuild Projects="Scientific\OldNN\src\OldNN.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="eicBrain">
+        <MSBuild Projects="Scientific\eicBrain\src\eicBrain.dproj"/>
+    </Target>
+    <Target Name="eicBrain:Clean">
+        <MSBuild Projects="Scientific\eicBrain\src\eicBrain.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="eicBrain:Make">
+        <MSBuild Projects="Scientific\eicBrain\src\eicBrain.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Mutui">
+        <MSBuild Projects="Scientific\Mutui\src\Mutui.dproj"/>
+    </Target>
+    <Target Name="Mutui:Clean">
+        <MSBuild Projects="Scientific\Mutui\src\Mutui.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Mutui:Make">
+        <MSBuild Projects="Scientific\Mutui\src\Mutui.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Agents">
+        <MSBuild Projects="Vario\Agents\src\Agents.dproj"/>
+    </Target>
+    <Target Name="Agents:Clean">
+        <MSBuild Projects="Vario\Agents\src\Agents.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Agents:Make">
+        <MSBuild Projects="Vario\Agents\src\Agents.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Bioritmi">
+        <MSBuild Projects="Vario\Bioritmi\src\Bioritmi.dproj"/>
+    </Target>
+    <Target Name="Bioritmi:Clean">
+        <MSBuild Projects="Vario\Bioritmi\src\Bioritmi.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Bioritmi:Make">
+        <MSBuild Projects="Vario\Bioritmi\src\Bioritmi.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="eMelCheck">
+        <MSBuild Projects="Vario\eMelody\src\eMelCheck.dproj"/>
+    </Target>
+    <Target Name="eMelCheck:Clean">
+        <MSBuild Projects="Vario\eMelody\src\eMelCheck.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="eMelCheck:Make">
+        <MSBuild Projects="Vario\eMelody\src\eMelCheck.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="WinCorp">
+        <MSBuild Projects="Games\WinCorp\src\WinCorp.dproj"/>
+    </Target>
+    <Target Name="WinCorp:Clean">
+        <MSBuild Projects="Games\WinCorp\src\WinCorp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WinCorp:Make">
+        <MSBuild Projects="Games\WinCorp\src\WinCorp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="OldNN;eicBrain;Mutui;Agents;Bioritmi;eMelCheck;WinCorp"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="OldNN:Clean;eicBrain:Clean;Mutui:Clean;Agents:Clean;Bioritmi:Clean;eMelCheck:Clean;WinCorp:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="OldNN:Make;eicBrain:Make;Mutui:Make;Agents:Make;Bioritmi:Make;eMelCheck:Make;WinCorp:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

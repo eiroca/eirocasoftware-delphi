@@ -24,13 +24,13 @@ object fmAnnuity: TfmAnnuity
     Caption = '%'
   end
   object Label3: TLabel
-    Left = 16
-    Top = 16
+    Left = 22
+    Top = 8
     Width = 329
     Height = 56
     Caption = 
       '                             (1+r)^N - 1       '#13'FV = PV*(1+i)^N ' +
-      '+ PMT*(1+i*t)*----------  = 0  '#13'                                ' +
+      '+ PMT*(1+i*t)*----------       '#13'                                ' +
       '  r            '#13
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
@@ -41,7 +41,7 @@ object fmAnnuity: TfmAnnuity
     WordWrap = True
   end
   object btCancel: TBitBtn
-    Left = 16
+    Left = 8
     Top = 282
     Width = 75
     Height = 25
@@ -54,6 +54,7 @@ object fmAnnuity: TfmAnnuity
     Top = 80
     Width = 57
     Height = 21
+    Alignment = taRightJustify
     EditLabel.Width = 99
     EditLabel.Height = 13
     EditLabel.Caption = 'Valore presente (PV)'
@@ -66,6 +67,7 @@ object fmAnnuity: TfmAnnuity
     Top = 115
     Width = 57
     Height = 21
+    Alignment = taRightJustify
     EditLabel.Width = 86
     EditLabel.Height = 13
     EditLabel.Caption = 'Valore futuro (FV)'
@@ -78,6 +80,7 @@ object fmAnnuity: TfmAnnuity
     Top = 150
     Width = 57
     Height = 21
+    Alignment = taRightJustify
     EditLabel.Width = 101
     EditLabel.Height = 13
     EditLabel.Caption = 'Tasso di interesse (r)'
@@ -90,6 +93,7 @@ object fmAnnuity: TfmAnnuity
     Top = 185
     Width = 57
     Height = 21
+    Alignment = taRightJustify
     EditLabel.Width = 101
     EditLabel.Height = 13
     EditLabel.Caption = 'Numero di periodi (N)'
@@ -102,6 +106,7 @@ object fmAnnuity: TfmAnnuity
     Top = 220
     Width = 57
     Height = 21
+    Alignment = taRightJustify
     EditLabel.Width = 156
     EditLabel.Height = 13
     EditLabel.Caption = 'Prelievo (+) / Versamento (-) (P)'

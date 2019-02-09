@@ -85,7 +85,7 @@ implementation
 {$R *.DFM}
 
 uses
-  eLibVCL;
+  eLibVCL, FAboutGPL;
 
 procedure TfmMain.FormCreate(Sender: TObject);
 begin

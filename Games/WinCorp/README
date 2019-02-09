@@ -1,0 +1,6 @@
+Name       : WinCorp
+Description: Small business simulation game
+OS         : Win32
+Type       : GUI
+Language   : Delphi 10.3
+Dependency : eLib, Jedi

@@ -222,8 +222,8 @@ object fmMarketReport: TfmMarketReport
     end
   end
   object btOk: TBitBtn
-    Left = 5
-    Top = 210
+    Left = 8
+    Top = 207
     Width = 361
     Height = 30
     Caption = 'x'
@@ -299,7 +299,7 @@ object fmMarketReport: TfmMarketReport
     end
   end
   object gbPAMix: TGroupBox
-    Left = 250
+    Left = 252
     Top = 155
     Width = 121
     Height = 46
@@ -319,10 +319,11 @@ object fmMarketReport: TfmMarketReport
       Height = 15
       Caption = 'x'
     end
-    object slMix: TJvSlider
-      Left = 20
-      Top = 15
-      Width = 85
+    object slMix: TJvxSlider
+      Left = 19
+      Top = 10
+      Width = 80
+      Height = 40
       Enabled = False
       TabOrder = 0
     end

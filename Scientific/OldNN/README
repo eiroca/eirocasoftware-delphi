@@ -1,0 +1,6 @@
+Name       : OldNN
+Description: Misc Neural network software
+OS         : Win32
+Type       : Console
+Language   : Delphi 10.3
+Dependency : -
